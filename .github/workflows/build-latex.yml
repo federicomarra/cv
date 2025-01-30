@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v2
         
       - name: Build cv.pdf from cv.tex
-        uses: xu-cheng/latex-action@v2
+        uses: xu-cheng/latex-action@v3
         with:
           root_file: cv.tex
           compiler: xelatex
@@ -28,7 +28,7 @@ jobs:
           texlive_version: 2024
 
       - name: Build resume.pdf from resume.tex
-        uses: xu-cheng/latex-action@v2
+        uses: xu-cheng/latex-action@v3
         with:
           root_file: resume.tex
           compiler: xelatex
@@ -37,7 +37,7 @@ jobs:
           texlive_version: 2024
 
       - name: Build coverletter.pdf from coverletter.tex
-        uses: xu-cheng/latex-action@v2
+        uses: xu-cheng/latex-action@v3
         with:
           root_file: coverletter.tex
           compiler: xelatex
@@ -58,19 +58,19 @@ jobs:
         run: cp ./coverletter.pdf ./output/coverletter.pdf
 
       - name: Upload cv.pdf Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: cv.pdf
           path: output/cv.pdf
 
       - name: Upload resume.pdf Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: resume.pdf
           path: output/resume.pdf
 
       - name: Upload coverletter.pdf Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: coverletter.pdf
           path: output/coverletter.pdf
