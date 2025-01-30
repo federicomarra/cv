@@ -18,13 +18,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y inkscape
+
       - name: Build cv.pdf from cv.tex
         uses: xu-cheng/latex-action@v3
         with:
           root_file: cv.tex
           compiler: xelatex
           extra_fonts: ./fonts/*.ttf
-          extra_system_packages: inkscape, texlive-xetex, texlive-fonts-recommended, texlive-fonts-extra, texlive-latex-extra
+          extra_system_packages: texlive-xetex, texlive-fonts-recommended, texlive-fonts-extra, texlive-latex-extra
           texlive_version: 2024
 
       - name: Build resume.pdf from resume.tex
@@ -33,7 +36,7 @@ jobs:
           root_file: resume.tex
           compiler: xelatex
           extra_fonts: ./fonts/*.ttf
-          extra_system_packages: inkscape, texlive-xetex, texlive-fonts-recommended, texlive-fonts-extra, texlive-latex-extra
+          extra_system_packages: texlive-xetex, texlive-fonts-recommended, texlive-fonts-extra, texlive-latex-extra
           texlive_version: 2024
 
       - name: Build coverletter.pdf from coverletter.tex
@@ -42,7 +45,7 @@ jobs:
           root_file: coverletter.tex
           compiler: xelatex
           extra_fonts: ./fonts/*.ttf
-          extra_system_packages: inkscape, texlive-xetex, texlive-fonts-recommended, texlive-fonts-extra, texlive-latex-extra
+          extra_system_packages: texlive-xetex, texlive-fonts-recommended, texlive-fonts-extra, texlive-latex-extra
           texlive_version: 2024
           
       - name: Ensure output directory exists
