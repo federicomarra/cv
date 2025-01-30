@@ -8,31 +8,38 @@ on:
 
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Build
+        
+      - name: Build pdf from tex
         uses: xu-cheng/latex-action@v2
         with:
           root_file: cv.tex
+          
+      - name: Ensure output directory exists
+        run: mkdir -p output
+        
       - name: Copy
-        run: |
-          mkdir output
-          cp ./cv.pdf ./output/cv.pdf
-      - uses: actions/upload-artifact@v3
+        run: cp ./cv.pdf ./output/cv.pdf
+        
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
         with:
-          name: thesis
+          name: cv.pdf
           path: output/cv.pdf
+
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@3.6.2
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          CLEAN: true
-          SINGLE_COMMIT: true
-          FOLDER: output
-          GIT_CONFIG_NAME: federicomarrabot
-          GIT_CONFIG_EMAIL: bot@noreply.federicomarra.com
+        run: |
+          git config --global user.name 'federicomarrabot'
+          git config --global user.email 'bot@noreply.federicomarra.com'
+          git checkout main
+          git add output/cv.pdf
+          git commit -m 'Deploy cv.pdf to output folder'
+          git push origin main
