@@ -3,8 +3,16 @@ name: Deploy PDF
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'cv-sec/**'
+      - 'coverletter.tex'
+      - '.github/workflows/build-latex.yml'
   pull_request:
     branches: [ main ]
+    paths:
+      - 'cv-sec/**'
+      - 'coverletter.tex'
+      - '.github/workflows/build-latex.yml'
 
   workflow_dispatch:
 
@@ -40,7 +48,7 @@ jobs:
       - name: Build coverletter.pdf from coverletter.tex
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: coverletter.tex
+          root_file: coverletter*.tex
           compiler: xelatex
           extra_fonts: ./fonts/*.ttf
           texlive_version: 2024
