@@ -276,10 +276,12 @@
 % Defines writer's mobile (optional)
 % Usage: \mobile{<mobile number>}
 \newcommand*{\mobile}[1]{\def\@mobile{#1}}
+\newcommand*{\mobiles}[2]{\def\@mobileone{#1} \def\@mobiletwo{#2}}
 
 % Defines writer's email (optional)
 % Usage: \email{<email address>}
 \newcommand*{\email}[1]{\def\@email{#1}}
+\newcommand*{\emails}[2]{\def\@emailone{#1} \def\@emailtwo{#2}}
 
 % Defines writer's homepage (optional)
 % Usage: \homepage{<url>}
@@ -288,6 +290,7 @@
 % Defines writer's github (optional)
 % Usage: \github{<github-nick>}
 \newcommand*{\github}[1]{\def\@github{#1}}
+\newcommand*{\repo}[1]{\href{#1}{\textbf{GitHub repository:} \text{#1}}}
 
 % Defines writer's gitlab (optional)
 % Usage: \gitlab{<gitlab-nick>}
@@ -455,18 +458,44 @@
     \headersocialstyle{%
       \newbool{isstart}%
       \setbool{isstart}{true}%
-      \ifthenelse{\isundefined{\@mobile}}%
-        {}%
+      \ifthenelse{\isundefined{\@mobileone}}%
+        {
+          \ifthenelse{\isundefined{\@mobile}}%
+            {}%
+            {%
+              \href{tel:\@mobile}{\faMobile\acvHeaderIconSep\@mobile}%
+              \setbool{isstart}{false}%
+            }%
+        }
         {%
-          \href{tel:\@mobile}{\faMobile\acvHeaderIconSep\@mobile}%
-          \setbool{isstart}{false}%
+            \href{tel:\@mobileone}{\faMobile\acvHeaderIconSep\@mobileone}%
+            \setbool{isstart}{false}%
+            \ifthenelse{\isundefined{\@mobiletwo}}%
+            {}%
+            {%
+              \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+              \href{tel:\@mobiletwo}{\faMobile\acvHeaderIconSep\@mobiletwo}%
+            }%
         }%
-      \ifthenelse{\isundefined{\@email}}%
-        {}%
-        {%
-          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{mailto:\@email}{\faEnvelope\acvHeaderIconSep\@email}%
-        }%
+      \ifthenelse{\isundefined{\@emailone}}%
+        {
+          \ifthenelse{\isundefined{\@email}}%
+            {}%
+            {%
+              \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+              \href{mailto:\@email}{\faEnvelope\acvHeaderIconSep\@email}%
+            }%
+        }
+        {
+            \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+            \href{mailto:\@emailone}{\faEnvelope\acvHeaderIconSep\@emailone}%
+            \ifthenelse{\isundefined{\@emailtwo}}%
+            {}%
+            {%
+              \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+              \href{mailto:\@emailtwo}{\faEnvelope\acvHeaderIconSep\@emailtwo}%
+            }%
+        }
       \ifthenelse{\isundefined{\@homepage}}%
         {}%
         {%
