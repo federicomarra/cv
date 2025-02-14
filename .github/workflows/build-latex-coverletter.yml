@@ -62,5 +62,5 @@ jobs:
           git config --global user.email 'fecrom@gmail.com'
           git checkout main
           git add output/*.pdf
-          git commit -m 'Compile PDFs in output folder'
+          git commit -m 'Compile Coverletter PDFs in output folder'
           git push origin main
