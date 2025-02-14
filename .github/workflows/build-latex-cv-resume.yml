@@ -48,8 +48,8 @@ jobs:
 
       - name: Move pdfs
         run: |
-	  cp ./cv.pdf ./output/cv.pdf
-	  cp ./resume.pdf ./output/resume.pdf
+          cp ./cv.pdf ./output/cv.pdf
+          cp ./resume.pdf ./output/resume.pdf
 
       - name: Upload cv.pdf Artifact
         uses: actions/upload-artifact@v4
