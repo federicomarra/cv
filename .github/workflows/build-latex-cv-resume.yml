@@ -46,10 +46,11 @@ jobs:
       - name: Ensure output directory exists
         run: mkdir -p output
 
-      - name: Move pdfs
-        run: |
-	  cp ./cv.pdf ./output/cv.pdf
-	  cp ./resume.pdf ./output/resume.pdf
+      - name: Move cv pdf
+        run: cp ./cv.pdf ./output/cv.pdf
+	
+      - name: Move resume pdf
+        run:  cp ./resume.pdf ./output/resume.pdf
 
       - name: Upload cv.pdf Artifact
         uses: actions/upload-artifact@v4
