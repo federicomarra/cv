@@ -1,0 +1,64 @@
+name: Coverletters PDFs
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'coverletter-**'
+      - '.github/workflows/build-latex-coverletter.yml'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'coverletter-**'
+      - '.github/workflows/build-latex-coverletter.yml'
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y inkscape texlive-xetex texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
+
+      - name: Install dependency
+        run: sudo apt-get install -y texlive-full
+
+      - name: Build coverletters
+        run: |
+            coverletter_files=()
+            for file in coverletter-*.tex; do
+              coverletter_files+=("$file")
+              xelatex "$file"
+            done
+      
+      - name: Ensure output directory exists
+        run: mkdir -p output
+
+      - name: Copy coverletters
+        run: |
+          mkdir -p output
+          for file in coverletter-*.pdf; do
+            cp "$file" output/"$file"
+          done
+
+      - name: Upload coverletters Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverletters
+          path: output/*.pdf
+
+      - name: Commit and push coverletters
+        run: |
+          git config --global user.name 'federicomarra'
+          git config --global user.email 'fecrom@gmail.com'
+          git checkout main
+          git add output/*.pdf
+          git commit -m 'Compile Coverletter PDFs in output folder'
+          git push
