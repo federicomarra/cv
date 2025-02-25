@@ -1,0 +1,106 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for Cover Letter
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Authors:
+% Claud D. Park <posquit0.bj@gmail.com>
+% Lars Richter <mail@ayeks.de>
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\input{cv-sec/info}
+
+%-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%	All of the below lines must be filled out
+%-------------------------------------------------------------------------------
+% The company being applied to
+\recipient
+  {Topsoe A/S\\Kgs. Lyngby, Denmark}
+  {HR IT and Digitalisation Team}
+% The date on the letter, default is the date of compilation
+\letterdate{\today}
+% The title of the letter
+\lettertitle{Job Application for Student Assistant HR IT \& Digitalisation}
+% How the letter is opened
+\letteropening{Dear Mr. Gorm,}
+% How the letter is closed
+\letterclosing{Sincerely,}
+% Any enclosures with the letter
+\letterenclosure[Attached]{Curriculum Vitae}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment (C: center, L: left, R: right)
+\makecvheader[R]
+
+% Print the footer with 3 arguments (<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+  {Federico Marra~~~·~~~Cover Letter}
+  {}
+
+% Print the title with above letter informations
+\makelettertitle
+
+%-------------------------------------------------------------------------------
+%	LETTER CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvletter}
+
+\lettersection{About Me}
+I am Federico Marra, a Master’s student in Computer Science and Engineering at the Technical University of Denmark (DTU). My academic background in Data Security, Software Engineering, and Program Verification has provided me with a solid technical foundation. In addition, my hands-on experience as a Software Engineer at SNAP4 S.r.l. has affiancato la mia capacità di gestire progetti complessi, lavorare in team dinamici e sviluppare soluzioni innovative. I am confident that these skills make me well-prepared to contribute effectively in a digital transformation context.
+
+\lettersection{Why Topsoe?}
+I am particularly drawn to Topsoe’s commitment to technological innovation and sustainability. As a leading global provider of solutions for the energy transition, Topsoe’s vision to drive decarbonization and improve operational efficiency resonates deeply with my professional aspirations. The prospect of supporting the HR IT initiatives—especially through the enhancement of your global HR platform—presents an exciting opportunity to blend my technical expertise with my interest in creating outstanding digital experiences.
+
+\lettersection{Why Me?}
+My strong analytical skills, attention to detail, and passion for systems, processes, and automation make me a great candidate for the Student Assistant HR IT \& Digitalisation role. I bring hands-on experience in software development, data analysis, and documentation, along with the ability to prioritize tasks and work efficiently in a dynamic, international environment. I am eager to leverage these skills to support the continuous improvement of HR processes at Topsoe, contributing to user-friendly and data-driven solutions that enhance the overall HR experience.
+
+\end{cvletter}
+
+%-------------------------------------------------------------------------------
+% Print the signature and enclosures with above letter informations
+\makeletterclosing
+
+\end{document}
