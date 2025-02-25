@@ -1,0 +1,94 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for Cover Letter
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Authors:
+% Claud D. Park <posquit0.bj@gmail.com>
+% Lars Richter <mail@ayeks.de>
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+\input{cv-sec/info}
+
+
+%-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%	All of the below lines must be filled out
+%-------------------------------------------------------------------------------
+% The company being applied to
+\recipient
+  {Ørsted A/S\\2900 Hellerup, Denmark}
+  {Ørsted Threat \& Cyber Security Team}
+\letterdate{\today}
+\lettertitle{Job Application for Threat \& Cyber Security Assistant}
+\letteropening{Dear Hiring Manager,}
+\letterclosing{Sincerely,}
+\letterenclosure[Attached]{Curriculum Vitae}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+\makecvheader[R]
+
+\makecvfooter
+  {\today}
+  {Federico Marra~~~·~~~Cover Letter}
+  {}
+
+\makelettertitle
+
+\begin{cvletter}
+
+\lettersection{About Me}
+I am Federico Marra, a Master’s student in Computer Science and Engineering at the Technical University of Denmark (DTU). My academic background has provided me with a strong foundation in Data Security, Software Engineering, and Program Verification. I have developed hands-on expertise in Python along with a range of other programming languages and tools. Additionally, my recent role as a Software Engineer at SNAP4 S.r.l. has honed my abilities to manage technical projects, work in dynamic teams, and solve complex problems—all essential skills for a role in Threat \& Cyber Security.
+
+\lettersection{Why Ørsted?}
+Ørsted’s commitment to safeguarding critical systems and driving continuous innovation in cyber security resonates with my professional aspirations. I am eager to contribute to a team that prioritizes collaboration and proactive security measures. The opportunity to support daily security processes, manage documentation, and assist with data analysis perfectly aligns with both my academic training and professional experience. I am excited by the prospect of joining a forward-thinking organization where my passion for data security and problem-solving can make a tangible impact.
+
+\lettersection{Why Me?}
+My technical proficiency in Python, combined with my strong analytical skills and experience in managing documentation and process-oriented tasks, makes me a great fit for this role. I have successfully collaborated on projects that required detailed data analysis, rigorous documentation, and systematic problem resolution. My proactive, self-motivated approach—evidenced both in academic projects and my professional tenure at SNAP4 S.r.l.—ensures that I can effectively support and enhance Ørsted’s daily security operations. I am confident that my skills and drive will contribute positively to your team’s continuous improvement and innovation efforts.
+
+\end{cvletter}
+
+\makeletterclosing
+
+\end{document}

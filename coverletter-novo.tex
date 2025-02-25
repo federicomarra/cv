@@ -1,0 +1,94 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for Cover Letter
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Authors:
+% Claud D. Park <posquit0.bj@gmail.com>
+% Lars Richter <mail@ayeks.de>
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+\input{cv-sec/info}
+
+
+%-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%	All of the below lines must be filled out
+%-------------------------------------------------------------------------------
+% The company being applied to
+\recipient
+  {Novo Nordisk A/S\\Novo Nordisk Boulevard\\DK-2880 Bagsværd, Denmark}
+  {IT \& Digitalisation Team, Novo Nordisk}
+\letterdate{\today}
+\lettertitle{Job Application for Student Assistant in IT \& Digitalisation}
+\letteropening{Dear Hiring Manager,}
+\letterclosing{Sincerely,}
+\letterenclosure[Attached]{Curriculum Vitae}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+\makecvheader[R]
+
+\makecvfooter
+  {\today}
+  {Federico Marra~~~·~~~Cover Letter}
+  {}
+
+\makelettertitle
+
+\begin{cvletter}
+
+\lettersection{About Me}
+I am Federico Marra, a Master’s student in Computer Science and Engineering at the Technical University of Denmark (DTU). My academic training in Data Security, Software Engineering, and Program Verification has provided me with a solid technical foundation. In addition, my hands-on experience as a Software Engineer at SNAP4 S.r.l. has sharpened my skills in project management, teamwork, and innovative solution development. I have also contributed to projects such as a Diabetes Management Java app—a venture that resonates personally with me as I am diabetic—fueling my passion for digital health innovation.
+
+\lettersection{Why Novo Nordisk?}
+Novo Nordisk’s mission to transform lives through innovative healthcare solutions, especially in the field of diabetes, is both inspiring and personal. As someone living with diabetes, I deeply appreciate your commitment to improving patient outcomes and advancing digital health initiatives. The opportunity to work within the expansive IT \& Digitalisation division, alongside over 3000 dedicated professionals, aligns perfectly with my ambition to support cutting-edge digital transformation projects. I am particularly excited about contributing to areas such as data analytics, IT security, and digital innovation that drive both operational excellence and meaningful impact on patient care.
+
+\lettersection{Why Me?}
+My technical expertise, combined with strong analytical and communication skills, makes me a great fit for a student assistant role in IT \& Digitalisation. I have a proven track record in developing detailed reports, crafting strategic presentations, and conducting comprehensive data analyses. My proactive approach and ability to collaborate with diverse stakeholders have been demonstrated in both academic projects and professional settings. I am eager to bring my technical background, personal drive, and passion for digital health to Novo Nordisk, contributing to initiatives that enhance digital processes and ultimately improve the lives of patients worldwide.
+
+\end{cvletter}
+
+\makeletterclosing
+
+\end{document}

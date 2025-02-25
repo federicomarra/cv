@@ -1,0 +1,94 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for Cover Letter
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Authors:
+% Claud D. Park <posquit0.bj@gmail.com>
+% Lars Richter <mail@ayeks.de>
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+\input{cv-sec/info}
+
+
+%-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%	All of the below lines must be filled out
+%-------------------------------------------------------------------------------
+% The company being applied to
+\recipient
+  {Ørsted A/S\\2900 Hellerup, Denmark}
+  {Ørsted Architecture \& Technology Team}
+\letterdate{\today}
+\lettertitle{Job Application for Architecture \& Technology Assistant}
+\letteropening{Dear Hiring Manager,}
+\letterclosing{Sincerely,}
+\letterenclosure[Attached]{Curriculum Vitae}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+\makecvheader[R]
+
+\makecvfooter
+  {\today}
+  {Federico Marra~~~·~~~Cover Letter}
+  {}
+
+\makelettertitle
+
+\begin{cvletter}
+
+\lettersection{About Me}
+I am Federico Marra, a Master’s student in Computer Science and Engineering at the Technical University of Denmark (DTU). My academic journey—encompassing courses in Data Security, Program Verification, and Software Engineering—has equipped me with robust analytical skills and a solid technical foundation. Additionally, my professional experience as a Software Engineer at SNAP4 S.r.l. has honed my ability to manage projects, collaborate in dynamic teams, and deliver innovative solutions in fast-paced environments.
+
+\lettersection{Why Ørsted?}
+I am drawn to Ørsted’s commitment to digital transformation and its pioneering approach in integrating technology with sustainability. The Architecture \& Technology team’s vibrant community of over 150 specialists offers a unique platform for high-quality knowledge sharing and strategic innovation. I am excited by the prospect of supporting initiatives that drive company direction and create business value while upholding strong architectural principles.
+
+\lettersection{Why Me?}
+My technical expertise, combined with my strong analytical and strategic mindset, positions me well to support your management team. I have a proven track record in producing detailed reports, conducting data analysis, and developing strategic presentations—skills I refined through various university projects and my role at SNAP4 S.r.l. I am proactive, well-organized, and thrive in collaborative international settings. I am confident that my ability to communicate complex technical issues clearly and my passion for digital innovation will allow me to make a meaningful contribution to your team.
+
+\end{cvletter}
+
+\makeletterclosing
+
+\end{document}
