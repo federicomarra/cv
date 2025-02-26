@@ -1,0 +1,95 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for Cover Letter
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Authors:
+% Claud D. Park <posquit0.bj@gmail.com>
+% Lars Richter <mail@ayeks.de>
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% Change social information separator if needed
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\input{cv-sec/info}
+
+%-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%	All of the below lines must be filled out
+%-------------------------------------------------------------------------------
+% The company being applied to
+\recipient
+  {Novo Nordisk Engineering\\Virum, Denmark}
+  {Global IT Department}
+% The date on the letter, default is the date of compilation
+\letterdate{\today}
+% The title of the letter
+\lettertitle{Job Application for Student Assistant - Global IT Projects}
+% How the letter is opened
+\letteropening{Dear Mr. Høst Hansen,}
+% How the letter is closed
+\letterclosing{Sincerely,}
+% Any enclosures with the letter
+\letterenclosure[Attached]{Curriculum Vitae}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal information (alignment: R=right, L=left, C=center)
+\makecvheader[R]
+
+% Print the footer with three arguments (<left>, <center>, <right>)
+\makecvfooter
+  {\today}
+  {Federico Marra~~~·~~~Cover Letter}
+  {}
+
+% Print the title with above letter information
+\makelettertitle
+
+%-------------------------------------------------------------------------------
+%	LETTER CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvletter}
+
+\lettersection{About Me}
+I am Federico Marra, a Master’s student in Computer Science and Engineering at the Technical University of Denmark (DTU). My academic background in Data Security, Software Engineering, and Program Verification has provided me with a solid technical foundation. In addition, my experience as a Software Engineer at SNAP4 S.r.l. has honed my ability to manage projects, collaborate in agile teams, and develop innovative solutions. On a personal note, being diabetic has further motivated me to contribute to healthcare-related projects, as I understand firsthand the importance of quality and efficiency in systems that impact patient lives.
+
+\lettersection{Why Novo Nordisk Engineering?}
+I am excited by the opportunity to join Novo Nordisk Engineering, a leader in designing and building state-of-the-art pharma facilities that serve millions of patients worldwide. The prospect of supporting the Global IT team in planning, coordinating, and executing projects is particularly appealing. I am drawn to an environment that values collaboration, innovation, and a noble cause—ensuring that digital solutions empower both employees and end-users in a complex, international setting.
+
+\lettersection{Why Me?}
+My strong technical and organizational skills, coupled with my passion for project management, make me an excellent fit for this role. I have practical experience with software development and automation, and I am adept at supporting day-to-day IT project tasks such as preparing communications, scheduling meetings, and coordinating change management activities. Furthermore, my proactive and solution-oriented mindset enables me to thrive in dynamic environments. Being diabetic, I have a personal commitment to making a tangible impact in healthcare, and I am eager to contribute to projects that improve efficiency and quality in global IT operations at Novo Nordisk Engineering.
+
+\end{cvletter}
+
+%-------------------------------------------------------------------------------
+% Print the signature and enclosures with above letter information
+\makeletterclosing
+
+\end{document}
