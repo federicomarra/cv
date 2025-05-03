@@ -1,0 +1,53 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, a4paper]{awesome-cv}
+
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+\fontdir[fonts/]
+
+\colorlet{awesome}{awesome-red}
+\setbool{acvSectionColorHighlight}{true}
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\input{cv-sec/info}
+
+%-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%-------------------------------------------------------------------------------
+\recipient
+  {Novonesis\\Lyngby, Denmark}
+  {R\&D Scientific Data Applications Team}
+\letterdate{\today}
+\lettertitle{Job Application for Student Assistant in R\&D Scientific Data Applications}
+\letteropening{Dear Hiring Team at Novonesis,}
+\letterclosing{Sincerely,}
+\letterenclosure[Attached]{Curriculum Vitae}
+
+\begin{document}
+
+\makecvheader[R]
+
+\makecvfooter
+  {\today}
+  {Federico Marra~~~·~~~Cover Letter}
+  {}
+
+\makelettertitle
+
+\begin{cvletter}
+
+\lettersection{About Me}
+I am Federico Marra, a Master’s student in Computer Science and Engineering at the Technical University of Denmark (DTU). My experience as a Software Engineer at SNAP4 S.r.l., where I contributed to the development of Italy’s first car sharing and car pooling platform, has solidified my programming skills and my ability to work in agile development environments. I have practical experience with Python, Docker, Git, and CI/CD pipelines, and enjoy building robust, testable systems that scale.
+
+\lettersection{Why Novonesis?}
+After speaking with Steven Pilger, Software Engineer at Novonesis, I was particularly motivated to apply. Novonesis' mission to better the world with biology and its innovative application of data platforms in research deeply resonate with me. The opportunity to contribute to a bioinformatics infrastructure that powers scientific discovery is both exciting and aligned with my interests. I am especially enthusiastic about gaining hands-on experience with distributed systems and HPC clusters and applying my technical skills to solve real-world challenges in a meaningful, collaborative setting.
+
+\lettersection{Why Me?}
+My background in both computer science and applied projects makes me a strong fit for this student assistant position. I bring with me not only programming expertise in Python and experience with Unix-based environments, but also a passion for data-driven innovation. I am proactive, adaptable, eager to contribute to your efforts in improving scientific data applications. I am available to work 10–15 hours per week, with flexible scheduling around academic responsibilities. I would be thrilled to join your team and support Novonesis’ mission to transform the world through biosolutions.
+
+\end{cvletter}
+
+\makeletterclosing
+
+\end{document}
