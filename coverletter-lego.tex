@@ -1,0 +1,53 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, a4paper]{awesome-cv}
+
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+\fontdir[fonts/]
+
+\colorlet{awesome}{awesome-red}
+\setbool{acvSectionColorHighlight}{true}
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\input{cv-sec/info}
+
+%-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%-------------------------------------------------------------------------------
+\recipient
+  {The LEGO Group\\Digital Hub\\Copenhagen, Denmark}
+  {Digital Technology Early Career Team}
+\letterdate{\today}
+\lettertitle{Job Application for Digital Technology Early Career Student Worker}
+\letteropening{Dear Hiring Team at LEGO Group,}
+\letterclosing{Kind regards,}
+\letterenclosure[Attached]{Curriculum Vitae}
+
+\begin{document}
+
+\makecvheader[R]
+
+\makecvfooter
+  {\today}
+  {Federico Marra~~~·~~~Cover Letter}
+  {}
+
+\makelettertitle
+
+\begin{cvletter}
+
+\lettersection{About Me}
+My name is Federico Marra, and I am currently pursuing a Master’s in Computer Science and Engineering at the Technical University of Denmark (DTU). My hands-on experience as a Software Engineer at SNAP4 S.R.L., where I contributed to Italy’s first integrated car sharing and pooling platform, has deepened my skills in agile development and full-stack programming with technologies like TypeScript and React. I’m passionate about building products that are both technically robust and user-centered.
+
+\lettersection{Why LEGO?}
+The LEGO Group’s mission to inspire the builders of tomorrow deeply resonates with me. I see immense value in combining play, creativity, and technology to spark innovation—and I am eager to be part of a culture that encourages exploration and imagination. The student worker opportunity within the Digital Technology team is especially appealing because of the strong emphasis on mentorship, flexibility, and real-world contributions. Being part of a dynamic community of learners and creators, while shaping digital tools that enhance experiences for both employees and fans, is something I would be proud to contribute to.
+
+\lettersection{Why Me?}
+With a background in both front-end and back-end development, I’m confident I could bring value to teams working with Python, TypeScript, Node.js, React. I enjoy solving complex problems through code and thrive in collaborative environments. My experience ranges from building production, ready applications to designing academic projects focused on data processing, authentication systems, and simulation interfaces. I am eager to grow within the LEGO ecosystem, contributing 15-20 hours a week, and take full advantage of the learning journey the Early Career program offers. I believe in LEGO's vision, and I’m ready to help build its digital future.
+
+\end{cvletter}
+
+\makeletterclosing
+
+\end{document}
